@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="357.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nodePropertiesController">
+    <children>
+        <SplitPane dividerPositions="0.29014084507042254" layoutX="38.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="357.0" prefWidth="467.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="115.0" prefWidth="465.0">
+                    <children>
+                        <Text fill="#0000007d" layoutX="22.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Label Attributes" wrappingWidth="97.99999837344512" />
+                        <TextField fx:id="textField" layoutX="22.0" layoutY="34.0" prefHeight="27.0" prefWidth="421.0" />
+                        <Button fx:id="labelEdit" layoutX="320.0" layoutY="68.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="123.0" text="Label Properties" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="236.0" prefWidth="465.0">
+                    <children>
+                        <SplitPane dividerPositions="0.49667405764966743" layoutY="-2.0" prefHeight="259.0" prefWidth="465.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="233.0" prefWidth="168.0">
+                                    <children>
+                              <GridPane layoutX="10.0" layoutY="26.0" prefHeight="211.0" prefWidth="207.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                              <Slider fx:id="strokeWidth" blockIncrement="1.0" majorTickUnit="2.0" max="10.0" minorTickCount="1" prefHeight="22.0" prefWidth="103.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stroke Width" GridPane.rowIndex="2" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stroke Color" wrappingWidth="77.68603515625" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Node Color" />
+                                    <ColorPicker fx:id="nodeColor" prefHeight="27.0" prefWidth="31.0" GridPane.columnIndex="1" />
+                                    <ColorPicker fx:id="strokeColor" prefHeight="27.0" prefWidth="31.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Set Stroke" GridPane.rowIndex="3" />
+                                              <CheckBox fx:id="setStroke" mnemonicParsing="false" selected="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gradient" GridPane.rowIndex="4" />
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <children>
+                                          <CheckBox fx:id="gradientColor" layoutY="9.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="29.0" />
+                                          <ImageView fitHeight="27.0" fitWidth="62.0" layoutX="37.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@radial.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <children>
+                                          <ColorPicker fx:id="innerColor" layoutX="-1.0" layoutY="4.0" prefHeight="27.0" prefWidth="30.0" />
+                                          <Text layoutX="38.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inner Color" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </GridPane>
+                                        <Text fill="#00000084" layoutX="48.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Node Attributes" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="254.0" prefWidth="265.0">
+                                    <children>
+                                        <Button fx:id="ok" layoutX="92.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleOk" text="OK" />
+                                        <Button fx:id="cancel" layoutX="145.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+                                        <Canvas height="186.0" layoutX="-1.0" layoutY="1.0" width="223.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ababab21" height="165.0" layoutX="12.0" layoutY="23.0" stroke="TRANSPARENT" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" width="198.0" />
+                                        <Button layoutX="14.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleDefault" text="Default" />
+                                        <Text fill="#00000082" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sample" />
+                              <Ellipse fx:id="innerEllipse" fill="WHITE" layoutX="111.0" layoutY="106.0" radiusX="95.0" radiusY="60.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Text layoutX="94.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Node" />
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
